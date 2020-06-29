@@ -8,7 +8,7 @@ const PersonalInfo = () => {
             <div className="w3-display-container">
                 <img src={image} style={{width: '100%'}} alt="Avatar" />
                 <div className="w3-display-bottomleft w3-container w3-text-black">
-                    <h2>{`${firstname} ${lastname}`}</h2>
+                    <h2 className="w3-text-white">{`${firstname} ${lastname}`}</h2>
                 </div>
             </div>
 
