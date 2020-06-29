@@ -1,6 +1,11 @@
 import Head from 'next/head'
+import { END } from 'redux-saga'
+import { loadData } from '../actions'
+import { wrapper } from '../store'
 
-export default function CV() {
+import CV from '../components/cv'
+
+const Page = () => {
   return (
     <>
       <Head>
@@ -11,8 +16,19 @@ export default function CV() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-
+      <CV />
     </>
   )
 }
+
+export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
+
+  if (!store.getState()) {
+    store.dispatch(loadData())
+    store.dispatch(END)
+  }
+
+  await store.sagaTask.toPromise()
+})
+
+export default Page
