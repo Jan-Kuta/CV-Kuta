@@ -13,8 +13,8 @@ const PersonalInfo = () => {
             </div>
 
             <div className="w3-container">
-                {infoList.map(info => (
-                    <p><i className={`fa fa-${info.icon} fa-fw w3-margin-right w3-large w3-text-teal`}></i>{info.href ? <a href={info.href} target="_blank">{info.title}</a> : info.title}</p>
+                {infoList.map((info, index) => (
+                    <p key={index}><i className={`fa fa-${info.icon} fa-fw w3-margin-right w3-large w3-text-teal`}></i>{info.href ? <a href={info.href} target="_blank">{info.title}</a> : info.title}</p>
                 ))}
             </div>
         </>

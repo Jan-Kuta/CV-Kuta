@@ -26,7 +26,7 @@ const CV = () => {
                 </div>
 
                 {/* Right Column */}
-                <div className="w3-margin-top" style={{flexGrow: 2}}>
+                <div className="w3-margin-top" style={{flexGrow: 2, display: "flex", flexFlow: "column"}}>
                     <Work />
                     <Education />
                     <Hobbies />
