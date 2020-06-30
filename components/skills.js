@@ -5,7 +5,7 @@ const Skills = () => {
 
     return (
         <div className="w3-container w3-padding-16">
-            <p className="w3-large"><b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p className="w3-large"><b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Dovednosti</b></p>
             {skills.map(skill => (
                 <div key={skill.id}>
                     <p>{skill.title}</p>
