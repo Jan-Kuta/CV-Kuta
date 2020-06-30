@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 
 const PersonalInfo = () => {
     const personalInfo = useSelector((state) => state.personalInfo)
-    const { firstname, lastname, image, role, email, phone, address} = personalInfo
+    const { firstname, lastname, image, infoList} = personalInfo
     return (
         <>
             <div className="w3-display-container">
@@ -13,10 +13,9 @@ const PersonalInfo = () => {
             </div>
 
             <div className="w3-container">
-                <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{role}</p>
-                <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>{address}</p>
-                <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>{email}</p>
-                <p><i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>{phone}</p>
+                {infoList.map(info => (
+                    <p><i className={`fa fa-${info.icon} fa-fw w3-margin-right w3-large w3-text-teal`}></i>{info.href ? <a href={info.href} target="_blank">{info.title}</a> : info.title}</p>
+                ))}
             </div>
         </>
     )
