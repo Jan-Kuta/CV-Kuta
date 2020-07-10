@@ -7,7 +7,7 @@ const ToPdfButton = () => {
     const getPDF = () => {
         const input = document.getElementById('myCV');
         
-        html2canvas(input, {scale: 0.56})
+        html2canvas(input, {scale: 0.55})
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png', 0.5);
 
@@ -17,7 +17,7 @@ const ToPdfButton = () => {
             });
     }
 
-    return <button onClick={getPDF}>Download as PDF</button>
+    return <i title="Download as PDF" class="fa fa-cloud-download fa-3x w3-top w3-margin" aria-hidden="true" width={50} onClick={getPDF}></i>
 }
 
 export default ToPdfButton;
