@@ -7,7 +7,7 @@ const ToPdfButton = () => {
     const getPDF = () => {
         const input = document.getElementById('myCV');
         
-        html2canvas(input, {scale: 0.55})
+        html2canvas(input, {scale: 0.54})
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png', 0.5);
 
