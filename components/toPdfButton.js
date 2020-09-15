@@ -17,7 +17,7 @@ const ToPdfButton = () => {
             });
     }
 
-    return <i title="Download as PDF" class="fa fa-cloud-download fa-3x w3-top w3-margin" aria-hidden="true" width={50} onClick={getPDF}></i>
+    return <i title="Download as PDF" class="no-print fa fa-cloud-download fa-3x w3-top w3-margin" aria-hidden="true" width={50} onClick={getPDF}></i>
 }
 
 export default ToPdfButton;
