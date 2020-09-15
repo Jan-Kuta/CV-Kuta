@@ -8,7 +8,7 @@ import Education from './education'
 import Hobbies from './hobbies'
 import useSize  from '@react-hook/size'
 import LanguageButton from './languageButton'
-const ToPdfButton = dynamic(() => import('./toPdfButton'), {ssr: false})
+// const ToPdfButton = dynamic(() => import('./toPdfButton'), {ssr: false})
 
 const CV = () => {
     const loading = useSelector((state) => state.loading)
@@ -20,7 +20,7 @@ const CV = () => {
         <>
             {process.browser && (
                 <div className="w3-top w3-margin">
-                    <ToPdfButton />
+                    {/*<ToPdfButton />*/}
                     <LanguageButton />
                 </div>
             )}
