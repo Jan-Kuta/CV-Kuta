@@ -11,7 +11,7 @@
   "dependencies": {
     "@react-hook/size": "^2.1.0",
     "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "next": "9.4.4",
     "next-redux-wrapper": "^6.0.2",
     "react": "16.13.1",
